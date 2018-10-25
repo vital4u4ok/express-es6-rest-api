@@ -3,6 +3,7 @@ const ADDED = "Added";
 const APPLE_PROPERTIES = "An apple must have 'name' and 'weight'!";
 const DELETED = "Deleted";
 const APPLE_INCORRECT_WEIGHT = "Incorrect apple weight";
+const APPLE_UPDATED = "Updated";
 
 
 module.exports = {
@@ -10,5 +11,6 @@ module.exports = {
     APPLE_ADDED: ADDED,
     APPLE_PROPERTIES: APPLE_PROPERTIES,
     APPLE_DELETED: DELETED,
-    APPLE_INCORRECT_WEIGHT: APPLE_INCORRECT_WEIGHT
+    APPLE_INCORRECT_WEIGHT: APPLE_INCORRECT_WEIGHT,
+    APPLE_UPDATED: APPLE_UPDATED
 };

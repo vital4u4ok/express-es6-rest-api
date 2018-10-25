@@ -59,6 +59,35 @@ router.delete('/:weight', function (req, res) {
     
 });
 
+router.put('/:weight', function (req, res) {
+    var message = constants.APPLE_UPDATED;
+    var isError = true;
+
+    try {
+        var appleWeight = parseInt(req.params.weight);
+        var weight = req.body ? parseInt(req.body.weight) : null;
+        var name = req.body ? req.body.name : null;
+
+        if (weight && name) {
+            if (!isNaN(appleWeight)) {
+                isError = false;
+    
+                if (appleWeight !== weight) {
+                    apples.delete(appleWeight);
+                }
+                apples.set(weight, name);
+            } else {
+                message = constants.APPLE_INCORRECT_WEIGHT;
+            }
+        }
+    } catch(e) {
+        message = e.message;
+    } finally {
+        doneMessage(res, message, isError);
+    }
+    
+});
+
 router.put('/', function (req, res) {
     // TODO
     res.send({});
