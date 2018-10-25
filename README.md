@@ -3,7 +3,7 @@ Getting Started
 ---------------
 
 # clone it
-git clone git@github.com:developit/express-es6-rest-api.git
+git clone git@github.com:vital4u4ok/express-es6-rest-api.git
 cd express-es6-rest-api
 
 # Install dependencies
