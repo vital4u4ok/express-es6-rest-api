@@ -5,7 +5,11 @@ var constants = require('../lib/constants');
 var apples = new Map();
 
 router.get('/', function (req, res) {
-    res.send(JSON.stringify(apples));
+    var applesArray = [];
+    apples.forEach(function(value, key) {
+        applesArray.push({ name: value, weight: key });
+    });
+    res.send(JSON.stringify(applesArray));
 });
 
 router.post('/', function (req, res) {
